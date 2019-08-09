@@ -1,15 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {BrowserRouter} from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom';
 
 import Routes from './Routes';
 import './resources/css/app.css';
+import './firebase';
 
-const App = ()=>(
-    <BrowserRouter>
-        <Routes />
-    </BrowserRouter>
+const App = () => (
+  <BrowserRouter>
+    <Routes />
+  </BrowserRouter>
 );
 
 ReactDOM.render(<App />, document.getElementById('root'));
-
