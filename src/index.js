@@ -4,7 +4,6 @@ import { BrowserRouter } from 'react-router-dom';
 
 import Routes from './Routes';
 import './resources/css/app.css';
-import './firebase';
 
 const App = () => (
   <BrowserRouter>

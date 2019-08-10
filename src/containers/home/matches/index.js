@@ -1,5 +1,6 @@
 import React from 'react';
 import { Tag } from '../../../components/ui/miscellaneous';
+import Blocks from './blocks';
 
 export default () => {
   return (
@@ -12,7 +13,7 @@ export default () => {
         >
             Matches
         </Tag>
-            Block
+        <Blocks />
         <Tag
           bck="#ffffff"
           size="22px"
