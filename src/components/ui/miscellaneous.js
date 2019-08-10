@@ -42,3 +42,24 @@ export const reverseArray = (actualArray) => {
   }
   return reversedArray;
 };
+
+export const playerImage = (players) => {
+  const position = {
+    Keeper: 'KEEP',
+    Defence: 'DEF',
+    Midfield: 'MIDF',
+    Striker: 'STRIK',
+  };
+  const r = [];
+  // eslint-disable-next-line no-plusplus
+  for (let n = 1; n <= 4; ++n) {
+    const i = Math.floor((Math.random() * (20 - n)) + 1);
+    const player = players[i];
+    const imageName = `${player.name.toLowerCase()}_${player.lastname.toLowerCase()}.png`;
+    player.imageUrl = `../../../resources/images/players/player_to_upload/${position[player.position]}/${imageName}`;
+    r.push(player);
+    // eslint-disable-next-line no-param-reassign
+    players[i] = players[19 - n];
+  }
+  return r;
+};

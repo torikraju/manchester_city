@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { easePolyOut } from 'd3-ease';
 import Animate from 'react-move/Animate';
 
-
 class Stripes extends Component {
     state={
       stripes: [
@@ -29,6 +28,7 @@ class Stripes extends Component {
         },
       ],
     };
+
 
     showStripes=() => (
       this.state.stripes.map((el, index) => {
