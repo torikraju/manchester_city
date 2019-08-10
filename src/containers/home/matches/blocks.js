@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
+import Slide from 'react-reveal/Slide';
+
 import { matches } from '../../../firebase';
 import { fbDataConvert, reverseArray } from '../../../components/ui/miscellaneous';
+import MatchBlock from '../../../components/ui/matchBlock';
 
 class Blocks extends Component {
     state={
@@ -22,10 +25,18 @@ class Blocks extends Component {
       })();
     }
 
-    showMatches=() => {
-      return (
-        <div>Matches</div>
-      );
+    showMatches=(_matches) => {
+      return _matches
+        ? _matches.map(el => (
+          <Slide key={el.id} bottom>
+            <div className="item">
+              <div className="wrapper">
+                <MatchBlock match={el} />
+              </div>
+            </div>
+          </Slide>
+        ))
+        : null;
     };
 
     render() {
