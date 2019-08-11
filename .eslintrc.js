@@ -32,6 +32,8 @@ module.exports = {
     "react/prop-types": 0,
     "no-console": 0,
     "react/no-access-state-in-setstate": 0,
-    "react/no-array-index-key": 0
+    "react/no-array-index-key": 0,
+    "no-restricted-syntax": 0,
+    "react/no-unused-state":0
   },
 };
