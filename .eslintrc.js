@@ -34,6 +34,7 @@ module.exports = {
     "react/no-access-state-in-setstate": 0,
     "react/no-array-index-key": 0,
     "no-restricted-syntax": 0,
-    "react/no-unused-state":0
+    "react/no-unused-state":0,
+    "no-nested-ternary":0
   },
 };
