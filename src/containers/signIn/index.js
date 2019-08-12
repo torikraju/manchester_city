@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import FormFields from '../../components/ui/formFields';
 import { validate, prepareFormData } from '../../components/ui/miscellaneous';
+import { firebase } from '../../firebase';
 
 class signIn extends Component {
     state = {
@@ -60,9 +61,18 @@ class signIn extends Component {
       const { data, formIsValid } = prepareFormData(this.state.formData);
       if (formIsValid) {
         try {
-
+          const isAuth = await firebase.auth().signInWithEmailAndPassword(
+            data.email,
+            data.password,
+          );
+          if (isAuth.user) {
+            this.props.history.push('/dashboard');
+          } else {
+            this.setState({ formError: true });
+          }
         } catch (e) {
           console.log(e);
+          this.setState({ formError: true });
         }
       }
     };
