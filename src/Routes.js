@@ -8,6 +8,7 @@ import Layout from './HOC/Layout';
 import Home from './containers/home';
 import SignIn from './containers/signIn';
 import Dashboard from './containers/admin/dashboard';
+import AdminMatches from './containers/admin/matches';
 
 const Routes = (props) => {
   return (
@@ -16,6 +17,7 @@ const Routes = (props) => {
         <PublicRoutes {...props} path="/" exact component={Home} />
         <PublicRoutes {...props} restricted path="/signIn" exact component={SignIn} />
         <PrivateRoutes {...props} path="/dashboard" exact component={Dashboard} />
+        <PrivateRoutes {...props} path="/adminMatches" exact component={AdminMatches} />
       </Switch>
     </Layout>
   );
