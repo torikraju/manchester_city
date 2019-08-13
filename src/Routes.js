@@ -9,6 +9,7 @@ import Home from './containers/home';
 import SignIn from './containers/signIn';
 import Dashboard from './containers/admin/dashboard';
 import AdminMatches from './containers/admin/matches';
+import AddUpdateMatches from './containers/admin/addUpdateMatches';
 
 const Routes = (props) => {
   return (
@@ -18,6 +19,8 @@ const Routes = (props) => {
         <PublicRoutes {...props} restricted path="/signIn" exact component={SignIn} />
         <PrivateRoutes {...props} path="/dashboard" exact component={Dashboard} />
         <PrivateRoutes {...props} path="/adminMatches" exact component={AdminMatches} />
+        <PrivateRoutes {...props} path="/updateMatches/:id" exact component={AddUpdateMatches} />
+        <PrivateRoutes {...props} path="/addMatches" exact component={AddUpdateMatches} />
       </Switch>
     </Layout>
   );

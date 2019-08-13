@@ -8,11 +8,11 @@ const AdminNav = () => {
   const links = [
     {
       title: 'Matches',
-      linkTo: '/admin_matches',
+      linkTo: '/adminMatches',
     },
     {
       title: 'Add Match',
-      linkTo: '/admin_matches/edit_match',
+      linkTo: '/addMatches',
     },
     {
       title: 'Players',

@@ -37,6 +37,7 @@ export const fbDataConvert = snapshot => {
 
 export const reverseArray = (actualArray) => {
   const reversedArray = [];
+  // eslint-disable-next-line no-plusplus
   for (let i = actualArray.length - 1; i >= 0; i--) {
     reversedArray.push(actualArray[i]);
   }
