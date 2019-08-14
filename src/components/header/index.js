@@ -9,6 +9,7 @@ import { CityLogo } from '../ui/icons';
 import styles from './style';
 
 
+// eslint-disable-next-line react/prefer-stateless-function
 class Index extends Component {
   render() {
     const { classes } = this.props;

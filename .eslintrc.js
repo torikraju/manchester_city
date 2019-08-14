@@ -36,6 +36,7 @@ module.exports = {
     "no-restricted-syntax": 0,
     "react/no-unused-state":0,
     "no-nested-ternary":0,
-    "no-constant-condition":0
+    "no-constant-condition":0,
+    "guard-for-in":0
   },
 };

@@ -12,12 +12,14 @@ import AdminMatches from './containers/admin/matches';
 import AddUpdateMatches from './containers/admin/addUpdateMatches';
 import AdminPlayers from './containers/admin/players';
 import AddUpdatePlayer from './containers/admin/addUpdatePlayer';
+import TheTeam from './containers/TheTeam';
 
 const Routes = (props) => {
   return (
     <Layout>
       <Switch>
         <PublicRoutes {...props} path="/" exact component={Home} />
+        <PublicRoutes {...props} path="/theTeam" exact component={TheTeam} />
         <PublicRoutes {...props} restricted path="/signIn" exact component={SignIn} />
         <PrivateRoutes {...props} path="/dashboard" exact component={Dashboard} />
         <PrivateRoutes {...props} path="/adminMatches" exact component={AdminMatches} />
