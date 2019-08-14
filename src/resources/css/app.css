@@ -261,7 +261,7 @@ footer .footer_discl {
 
 .match_block .match_wrapper .match_top .left,
 .match_block .match_wrapper .match_bottom .left {
-    background: #ffffff; 
+    background: #ffffff;
     font-family: 'Righteous', cursive;
     flex-grow: 1;
     margin-right: 5px;
@@ -287,14 +287,14 @@ footer .footer_discl {
 
 
 .match_block .match_wrapper .match_top .right,
-.match_block .match_wrapper .match_bottom .right { 
+.match_block .match_wrapper .match_bottom .right {
     background: #0e1731;
     width: 70px;
     color: #ffffff;
     font-size: 50px;
     text-align: center;
     padding-top: 6px;
-} 
+}
 
 .match_box_big {
     width:100%;
@@ -385,7 +385,7 @@ footer .footer_discl {
 ===============================*/
 
 
-.home_meetplayers { 
+.home_meetplayers {
     background: #ffffff;
 }
 
@@ -442,7 +442,7 @@ footer .footer_discl {
     bottom: 0px;
 }
 
-.player_card_wrapper .player_card_name span { 
+.player_card_wrapper .player_card_name span {
     display: block;
     font-size: 25px;
     color: #0d1831;
@@ -466,7 +466,7 @@ footer .footer_discl {
     padding: 80px 0px 30px 0px;
 }
 
-.promotion_wrapper .promotion_animation .left { 
+.promotion_wrapper .promotion_animation .left {
     text-transform: uppercase;
     text-transform: uppercase;
     font-size: 150px;
@@ -598,7 +598,7 @@ footer .footer_discl {
     width: 480px;
 }
 
- 
+
 .select_team_layout .wrapper{
     display: flex;
 }
@@ -681,4 +681,33 @@ footer .footer_discl {
     color: #d5ebfe;
     text-align: center;
     margin-top: 200px;
+}
+
+.lds-circle {
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    /*margin: 8px;*/
+    border-radius: 50%;
+    background: #98c6e9;
+    animation: lds-circle 2.4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+    position:absolute; /*it can be fixed too*/
+    left:0; right:0;
+    top:0; bottom:0;
+    margin:auto;
+}
+@keyframes lds-circle {
+    0%, 100% {
+        animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
+    }
+    0% {
+        transform: rotateY(0deg);
+    }
+    50% {
+        transform: rotateY(1800deg);
+        animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
+    }
+    100% {
+        transform: rotateY(3600deg);
+    }
 }

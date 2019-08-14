@@ -16,11 +16,11 @@ const AdminNav = () => {
     },
     {
       title: 'Players',
-      linkTo: '/admin_players',
+      linkTo: '/adminPlayers',
     },
     {
       title: 'Add Players',
-      linkTo: '/admin_players/add_player',
+      linkTo: '/addPlayer',
     },
   ];
 

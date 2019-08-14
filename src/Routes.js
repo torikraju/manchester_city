@@ -10,6 +10,8 @@ import SignIn from './containers/signIn';
 import Dashboard from './containers/admin/dashboard';
 import AdminMatches from './containers/admin/matches';
 import AddUpdateMatches from './containers/admin/addUpdateMatches';
+import AdminPlayers from './containers/admin/players';
+import AddUpdatePlayer from './containers/admin/addUpdatePlayer';
 
 const Routes = (props) => {
   return (
@@ -21,6 +23,9 @@ const Routes = (props) => {
         <PrivateRoutes {...props} path="/adminMatches" exact component={AdminMatches} />
         <PrivateRoutes {...props} path="/updateMatches/:id" exact component={AddUpdateMatches} />
         <PrivateRoutes {...props} path="/addMatches" exact component={AddUpdateMatches} />
+        <PrivateRoutes {...props} path="/adminPlayers" exact component={AdminPlayers} />
+        <PrivateRoutes {...props} path="/updatePlayer/:id" exact component={AddUpdatePlayer} />
+        <PrivateRoutes {...props} path="/AddPlayer" exact component={AddUpdatePlayer} />
       </Switch>
     </Layout>
   );
