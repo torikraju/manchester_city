@@ -13,6 +13,8 @@ import AddUpdateMatches from './containers/admin/addUpdateMatches';
 import AdminPlayers from './containers/admin/players';
 import AddUpdatePlayer from './containers/admin/addUpdatePlayer';
 import TheTeam from './containers/TheTeam';
+import TheMatches from './containers/theMatches';
+import NotFound from './components/ui/not_found';
 
 const Routes = (props) => {
   return (
@@ -20,6 +22,7 @@ const Routes = (props) => {
       <Switch>
         <PublicRoutes {...props} path="/" exact component={Home} />
         <PublicRoutes {...props} path="/theTeam" exact component={TheTeam} />
+        <PublicRoutes {...props} path="/matches" exact component={TheMatches} />
         <PublicRoutes {...props} restricted path="/signIn" exact component={SignIn} />
         <PrivateRoutes {...props} path="/dashboard" exact component={Dashboard} />
         <PrivateRoutes {...props} path="/adminMatches" exact component={AdminMatches} />
@@ -28,6 +31,7 @@ const Routes = (props) => {
         <PrivateRoutes {...props} path="/adminPlayers" exact component={AdminPlayers} />
         <PrivateRoutes {...props} path="/updatePlayer/:id" exact component={AddUpdatePlayer} />
         <PrivateRoutes {...props} path="/AddPlayer" exact component={AddUpdatePlayer} />
+        <PublicRoutes {...props} restricted={false} component={NotFound} />
       </Switch>
     </Layout>
   );

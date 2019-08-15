@@ -34,19 +34,21 @@ export default class extends Component {
           start={{
             left: 0,
             bottom: 0,
+            key: index,
           }}
           enter={{
             left: [el.left],
             bottom: [el.bottom],
+            key: [index],
             timing: { duration: 500, ease: easePolyOut },
           }}
         >
-          {({ left, bottom }) => {
+          {(state) => {
             return (
               <div style={{
                 position: 'absolute',
-                left,
-                bottom,
+                left: state.left,
+                bottom: state.bottom,
               }}
               >
                 <PlayerCard
